@@ -48,4 +48,19 @@ rm -r second-project (от англ. remove, «удалить» + recursive, «�
 
 Например, вы находитесь в папке dev. Начните вводить cd first и дважды нажмите Tab. Если папка first-project есть внутри dev, командная строка автоматически подставит её имя. Останется только нажать Enter.  
 
+----
+
+erDiagram
+          CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+          CUSTOMER ||--o{ ORDER : places
+          CUSTOMER ||--o{ INVOICE : "liable for"
+          DELIVERY-ADDRESS ||--o{ ORDER : receives
+          INVOICE ||--|{ ORDER : covers
+          ORDER ||--|{ ORDER-ITEM : includes
+          PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+          PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+
+
+
+
 
